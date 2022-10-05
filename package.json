@@ -4,8 +4,15 @@
   "description": "Recipe website made with bootstrap and vanilla javascript using a fetch API",
   "source": "./src/index.html",
   "scripts": {
-    "dev": "parcel",
-    "build": "parcel build"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "static",
+      "static"
+    ],
+    "watcherGlob": "**"
   },
   "repository": {
     "type": "git",
@@ -20,9 +27,11 @@
   "homepage": "https://github.com/mancjames/yummy#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
-    "parcel": "^2.7.0"
+    "parcel": "^2.7.0",
+    "parcel-namer-hashless": "^1.0.3"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.0"
   }
 }
